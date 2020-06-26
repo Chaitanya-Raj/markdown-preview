@@ -10,10 +10,10 @@ function App() {
       renderer: new Marked.Renderer(),
       pedantic: false,
       gfm: true,
-      breaks: false,
+      breaks: true,
       sanitize: false,
       smartLists: true,
-      smartypants: false,
+      smartypants: true,
       xhtml: false,
     });
     document.querySelector(".output").innerHTML = Marked(markdown);
@@ -25,17 +25,20 @@ function App() {
         <h1>Markdown Preview</h1>
       </header>
       <div className="container">
-        <div className="markdown">
-          <textarea
-            name="md"
-            id="md"
-            cols="30"
-            rows="10"
-            value={markdown}
-            onChange={(e) => setMarkdown(e.target.value)}
-          ></textarea>
+        <div className="content">
+          <div className="markdown">
+            <textarea
+              name="md"
+              id="md"
+              cols="30"
+              rows="10"
+              placeholder="Type markdown text here..."
+              value={markdown}
+              onChange={(e) => setMarkdown(e.target.value)}
+            ></textarea>
+          </div>
+          <div className="output"></div>
         </div>
-        <div className="output"></div>
       </div>
     </div>
   );
