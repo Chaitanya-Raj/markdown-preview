@@ -4,6 +4,7 @@ import "./App.css";
 
 function App() {
   const [markdown, setMarkdown] = useState("");
+  const [preview, setPreview] = useState(false);
 
   useEffect(() => {
     Marked.setOptions({
@@ -24,6 +25,15 @@ function App() {
       <header>
         <h1>Markdown Preview</h1>
       </header>
+      <button
+        onClick={() => {
+          setPreview(!preview);
+          document.querySelector(".markdown").classList.toggle("hide");
+          document.querySelector(".output").classList.toggle("hide");
+        }}
+      >
+        &#128065;
+      </button>
       <div className="container">
         <div className="content">
           <div className="markdown">
@@ -37,7 +47,7 @@ function App() {
               onChange={(e) => setMarkdown(e.target.value)}
             ></textarea>
           </div>
-          <div className="output"></div>
+          <div className="output hide"></div>
         </div>
       </div>
     </div>
