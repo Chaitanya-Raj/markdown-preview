@@ -26,8 +26,9 @@ function App() {
         <h1>Markdown Preview</h1>
       </header>
       <button
-        onClick={() => {
+        onClick={(e) => {
           setPreview(!preview);
+          e.target.classList.toggle("active");
           document.querySelector(".markdown").classList.toggle("hide");
           document.querySelector(".output").classList.toggle("hide");
         }}
