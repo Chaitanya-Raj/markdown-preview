@@ -1,3 +1,13 @@
+# Markdown Preview
+
+A markdown previewer made with React. See the output of the markdown text as you type.
+
+## Markdown Parser Used
+
+[Marked](https://github.com/markedjs/marked)
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
