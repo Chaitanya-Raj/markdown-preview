@@ -48,7 +48,7 @@ button {
 
 .container {
   display: flex;
-  width: 80vw;
+  width: 90vw;
   border-radius: 20px;
   min-height: 80vh;
   height: auto;
